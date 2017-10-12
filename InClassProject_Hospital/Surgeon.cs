@@ -6,27 +6,28 @@ using System.Threading.Tasks;
 
 namespace InClassProject_Hospital
 {
-    class Doctor : Employee
+    class Surgeon : Doctor
     {
-        protected string specialty;
+        protected bool isOperating;
 
-        public string Specialty { get; set; }
+        public bool IsOperating { get; set; }
 
-        public Doctor()
+        public Surgeon()
         {
 
         }
 
-        public Doctor(string employeeName, string employeeNumber, string specialty)
+        public Surgeon(string employeeName, string employeeNumber, string specialty, bool isOperating)
         {
             this.employeeName = employeeName;
             this.employeeNumber = employeeNumber;
             this.specialty = specialty;
+            this.isOperating = isOperating;
         }
 
         public override string EmployeeInfo()
         {
-            return base.EmployeeInfo() + " " + specialty;
+            return base.EmployeeInfo() + " " + specialty + " " + isOperating;
         }
 
 

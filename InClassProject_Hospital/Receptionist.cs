@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InClassProject_Hospital
 {
-    class Receptionist
+    class Receptionist : Employee
     {
         protected string department;
         protected bool onThePhone;
@@ -19,13 +19,34 @@ namespace InClassProject_Hospital
 
         }
 
-        public Receptionist(string department, bool onThePhone)
+        public Receptionist(string employeeName, string employeeNumber, string department, bool onThePhone)
         {
+            this.employeeName = employeeName;
+            this.employeeNumber = employeeNumber;
             this.department = department;
             this.onThePhone = onThePhone;
         }
 
+        public override string EmployeeInfo()
+        {
+            string phoneStatus;
+            if(onThePhone == true)
+            {
+                phoneStatus = " currently on the phone";
+            }
+            else
+            {
+                phoneStatus = "currently available";
+            }
 
+            return base.EmployeeInfo() + " " + department + " " + phoneStatus;
+        }
+
+
+        //public virtual string ReceptionistInfo()
+        //{
+        //    return employeeName + " " + employeeNumber + " " + department + " " + onThePhone;
+        //}
 
 
 
