@@ -28,7 +28,7 @@ namespace InClassProject_Hospital
         }
 
         public override string EmployeeInfo()
-        {
+        { 
             string phoneStatus;
             if(onThePhone == true)
             {

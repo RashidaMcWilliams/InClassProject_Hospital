@@ -10,6 +10,8 @@ namespace InClassProject_Hospital
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hammond - High Street Hospital Employees:");
+
             Employee sharon = new Employee("Sharon White", "347");
             sharon.EmployeeInfo();
             Console.WriteLine(sharon.EmployeeInfo());
